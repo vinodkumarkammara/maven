@@ -73,8 +73,14 @@
             <minimumTokens>100</minimumTokens>
             <targetJdk>1.8</targetJdk>
             <format>xml</format>
+            <excludes>
+              <exclude>**/*Bean.java</exclude>
+              <exclude>**/generated/*.java</exclude>
+            </excludes>
+            <excludeRoots>
+              <excludeRoot>target/generated-sources/stubs</excludeRoot>
+            <excludeRoots>
             <outputDirectory>reports/pmd/</outputDirectory>
-            <targetDirectory>reports/pmd/</targetDirectory>
           </configuration>
           <executions>
             <execution>
