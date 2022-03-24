@@ -64,6 +64,26 @@
           <version>3.0.2</version>
         </plugin>
         <plugin>
+          <groupID>org.apache.maven.plugins</groupID>
+          <artifactID>maven-pmd-plugin</artifactID>
+          <version>3.13.0</version>
+          <configuration>
+            <linkXref>true</linkXref>
+            <sourceEncoding>utf-8</sourceEncoding>
+            <minimumTokens>100</minimumTokens>
+            <targetJdk>1.8</targetJdk>
+            <format>xml</format>
+            <outputDirectory>reports/pmd/</outputDirectory>
+            <targetDirectory>reports/pmd/</targetDirectory>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>validate</phase>
+              <goals><goal>pmd</goal></goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
         </plugin>
